@@ -1,0 +1,17 @@
+commit 23ca620979ff16b8f9d5fdddf660112a9e008f33 (HEAD, origin/master, origin/HEAD, master)
+Author: sinfallas <sinfallas@gmail.com>
+Date:   Tue Nov 11 21:29:18 2014 -0430
+
+    * se crea el archivo del script
+
+commit 3028fe68300d346fedbbd40efa43389c5aaf1db9
+Author: sinfallas <sinfallas@gmail.com>
+Date:   Tue Nov 11 21:24:58 2014 -0430
+
+    * copyright
+
+commit 2cb2a6f0096313a08d8f19d83798a4b1d9b3e9ee
+Author: Jesus Palencia <sinfallas@users.noreply.github.com>
+Date:   Tue Nov 11 21:22:41 2014 -0430
+
+    Initial commit
