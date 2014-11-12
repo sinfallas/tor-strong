@@ -1,4 +1,4 @@
 tor-strong
 ==========
 
-tor + polipo + privoxy + dnsmasq
+script to install tor + polipo + privoxy + dnsmasq
