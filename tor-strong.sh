@@ -99,6 +99,11 @@ echo "keep-alive-timeout 5" >> /etc/privoxy/config
 echo "tolerate-pipelining 1" >> /etc/privoxy/config
 echo "socket-timeout 300" >> /etc/privoxy/config
 # dnsmasq
+echo "port=53" > /etc/dnsmasq.conf
+echo "domain-needed" >> /etc/dnsmasq.conf
+echo "bogus-priv" >> /etc/dnsmasq.conf
+echo "user=dnsmasq" >> /etc/dnsmasq.conf
+echo "group=dnsmasq" >> /etc/dnsmasq.conf
 echo "no-resolv" >> /etc/dnsmasq.conf
 echo "server=127.0.0.1#9053" >> /etc/dnsmasq.conf
 echo "server=208.67.222.222" >> /etc/dnsmasq.conf
