@@ -1,4 +1,16 @@
-commit 82e157dc7f39c33fb8ad483201607394b8123036 (HEAD, origin/master, origin/HEAD, master)
+commit 97fd71ab43ae662cf175a807d87f499a17b72a80 (HEAD, origin/master, origin/HEAD, master)
+Author: sinfallas <sinfallas@gmail.com>
+Date:   Fri Nov 14 22:18:36 2014 -0430
+
+    * se agrega el repositorio de tor al script
+
+commit f5244c61a669c968e69c3ca41ac8a1d07134ecae
+Author: sinfallas <sinfallas@gmail.com>
+Date:   Fri Nov 14 19:43:28 2014 -0430
+
+    * changelog
+
+commit 82e157dc7f39c33fb8ad483201607394b8123036
 Author: sinfallas <sinfallas@gmail.com>
 Date:   Fri Nov 14 19:43:15 2014 -0430
 
