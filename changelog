@@ -1,4 +1,16 @@
-commit 01f1e375fbff6648357d97ee502335fcbab08ae4 (HEAD, origin/master, origin/HEAD, master)
+commit 2a0cfc2bae0a53c53aca391e9e6bccd575678d72 (HEAD, origin/master, origin/HEAD, master)
+Author: sinfallas <sinfallas@gmail.com>
+Date:   Fri Nov 14 19:32:10 2014 -0430
+
+    * misc
+
+commit 908462beaac7e2e1a69ce3598280d3801b91535e
+Author: sinfallas <sinfallas@gmail.com>
+Date:   Fri Nov 14 19:29:37 2014 -0430
+
+    * changelog
+
+commit 01f1e375fbff6648357d97ee502335fcbab08ae4
 Author: sinfallas <sinfallas@gmail.com>
 Date:   Fri Nov 14 19:29:16 2014 -0430
 
