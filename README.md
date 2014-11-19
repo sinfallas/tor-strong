@@ -13,5 +13,5 @@ $ chmod +x tor-strong.sh
 Then:
 
 ```bash
-./tor-strong.sh
+# ./tor-strong.sh
 ```
