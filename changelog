@@ -1,4 +1,55 @@
-commit 97fd71ab43ae662cf175a807d87f499a17b72a80 (HEAD, origin/master, origin/HEAD, master)
+commit a17c22360d379e91d5eb1ce78d8ad22eb21c4fdb (HEAD, origin/master, origin/HEAD, master)
+Author: sinfallas <sinfallas@gmail.com>
+Date:   Mon Nov 24 00:37:27 2014 -0430
+
+    * se agrega la posibilidad de iniciar y detener tor y demas servicios desde el script
+
+commit eb25d7df67570f8368258c8fd6a2171853dcb7a3
+Merge: ad5ea29 911a55e
+Author: Jose Perez <sinfallas@users.noreply.github.com>
+Date:   Wed Nov 19 12:55:33 2014 -0430
+
+    Merge pull request #1 from abr4xas/master
+    
+    update README.md
+
+commit 911a55e403a68f23f9eac0599b4232b4a6658226
+Author: ángel <bullgram@gmail.com>
+Date:   Wed Nov 19 12:30:28 2014 -0430
+
+    Update README.md
+
+commit f1568723058e826f51b5f10f8c7b461fc9ad0b22
+Author: ángel <bullgram@gmail.com>
+Date:   Wed Nov 19 12:29:46 2014 -0430
+
+    Update README.md
+
+commit d8e298dea747eabc33a5f62a4374c72f7168354e
+Author: ángel <bullgram@gmail.com>
+Date:   Wed Nov 19 12:28:54 2014 -0430
+
+    Update README.md
+
+commit ad5ea29074a841624a0d28e989435e92ed6ccd68
+Author: Jose Perez <sinfallas@users.noreply.github.com>
+Date:   Wed Nov 19 10:30:29 2014 -0430
+
+    Update README.md
+
+commit 3948491c2803bd9a4aec2987f75dafa5f642aaf7
+Author: Jose Perez <sinfallas@users.noreply.github.com>
+Date:   Wed Nov 19 10:29:26 2014 -0430
+
+    Update README.md
+
+commit ade6067b4c5b48b3f384efaa8e286242943a1490
+Author: sinfallas <sinfallas@gmail.com>
+Date:   Fri Nov 14 22:19:04 2014 -0430
+
+    * changelog
+
+commit 97fd71ab43ae662cf175a807d87f499a17b72a80
 Author: sinfallas <sinfallas@gmail.com>
 Date:   Fri Nov 14 22:18:36 2014 -0430
 
