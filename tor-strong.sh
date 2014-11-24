@@ -119,6 +119,7 @@ case "$1" in
 		echo "server=127.0.0.1#9053" >> /etc/dnsmasq.conf
 		echo "server=208.67.222.222" >> /etc/dnsmasq.conf
 		# finalizando
+		adduser --system --no-create-home debian-tor debian-tor
 		chown debian-tor:debian-tor /var/log/tor /var/lib/tor
 		chmod 600 /var/lib/tor /var/log/tor
 		chmod u+x /var/lib/tor /var/log/tor
