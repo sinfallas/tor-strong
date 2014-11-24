@@ -1,4 +1,16 @@
-commit a17c22360d379e91d5eb1ce78d8ad22eb21c4fdb (HEAD, origin/master, origin/HEAD, master)
+commit b92f2c8ae0df7763ebf8fbfd49d85f8898115f94 (HEAD, origin/master, origin/HEAD, master)
+Author: sinfallas <sinfallas@gmail.com>
+Date:   Mon Nov 24 00:57:31 2014 -0430
+
+    * se agrega el usuario y grupo correspondiente a tor
+
+commit bf3a6a2030f6e58eaeb244b56e57955a19001bbe
+Author: sinfallas <sinfallas@gmail.com>
+Date:   Mon Nov 24 00:38:12 2014 -0430
+
+    * changelog
+
+commit a17c22360d379e91d5eb1ce78d8ad22eb21c4fdb
 Author: sinfallas <sinfallas@gmail.com>
 Date:   Mon Nov 24 00:37:27 2014 -0430
 
