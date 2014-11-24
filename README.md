@@ -1,8 +1,7 @@
 # tor-strong
 
-
 ![Status](https://api.travis-ci.org/sinfallas/tor-strong.svg) 
-script to install tor + polipo + privoxy + dnsmasq
+Script to install tor + polipo + privoxy + dnsmasq
 
 ## How to use
 
@@ -10,7 +9,7 @@ script to install tor + polipo + privoxy + dnsmasq
 $ curl -O https://raw.githubusercontent.com/sinfallas/tor-strong/master/tor-strong.sh
 $ chmod +x tor-strong.sh
 ```
-Then, using root or sudo:
+Then execute as root or sudo:
 
 ```bash
  ./tor-strong.sh
