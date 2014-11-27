@@ -13,5 +13,6 @@ $ chmod +x tor-strong.sh
 Then, using root or sudo:
 
 ```bash
- ./tor-strong.sh
+ ./tor-strong.sh install
+  ./tor-strong.sh start|stop
 ```
