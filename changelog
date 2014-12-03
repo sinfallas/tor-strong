@@ -1,4 +1,27 @@
-commit d886248fbcf73bd8839fa2a6b418e8bee44a6989 (HEAD, origin/master, origin/HEAD, master)
+commit 5d01601ff9d519a71192da4c93e6a19a623ed684 (HEAD, origin/master, origin/HEAD, master)
+Merge: 31caf79 6ce8ebe
+Author: Jose Perez <sinfallas@users.noreply.github.com>
+Date:   Thu Nov 27 22:25:57 2014 -0430
+
+    Merge pull request #2 from abr4xas/master
+    
+    Update README.md
+
+commit 6ce8ebe825b65087f9bbec23fd3ec9262ad5e2c6
+Author: ángel <bullgram@gmail.com>
+Date:   Thu Nov 27 10:27:19 2014 -0430
+
+    Update README.md
+    
+    Se indica como instalar|iniciar|detener tor+polipo+privoxy+dnsmasq
+
+commit 31caf7907311b17f6d79dbfe65815e0133f0280d
+Author: sinfallas <sinfallas@gmail.com>
+Date:   Mon Nov 24 01:08:53 2014 -0430
+
+    * changelog
+
+commit d886248fbcf73bd8839fa2a6b418e8bee44a6989
 Author: sinfallas <sinfallas@gmail.com>
 Date:   Mon Nov 24 01:08:36 2014 -0430
 
