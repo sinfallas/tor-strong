@@ -1,4 +1,16 @@
-commit 5d01601ff9d519a71192da4c93e6a19a623ed684 (HEAD, origin/master, origin/HEAD, master)
+commit be1d3243323d3aadd3a82fd2be1e7dc6141e1364 (HEAD, origin/master, origin/HEAD, master)
+Author: sinfallas <sinfallas@gmail.com>
+Date:   Fri Dec 19 23:05:14 2014 -0430
+
+    * se actualiza el readme
+
+commit 91b7d12ed2386e63771aec9b2a6657d377c45a5c (tag: v1.2)
+Author: sinfallas <sinfallas@gmail.com>
+Date:   Wed Dec 3 15:51:56 2014 -0430
+
+    * changelog
+
+commit 5d01601ff9d519a71192da4c93e6a19a623ed684
 Merge: 31caf79 6ce8ebe
 Author: Jose Perez <sinfallas@users.noreply.github.com>
 Date:   Thu Nov 27 22:25:57 2014 -0430
