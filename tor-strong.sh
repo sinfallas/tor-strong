@@ -127,7 +127,7 @@ case "$1" in
 		rm -f /usr/share/tor/tor-service-defaults-torrc
 		ln -s /etc/tor/torrc /usr/share/tor/tor-service-defaults-torrc
 		echo "Finalizado se recomienda reiniciar..."
-	;;
+		;;
 
 	start)
 		if [[ -f $lock ]]; then
@@ -146,7 +146,7 @@ case "$1" in
 			sleep 30
 			echo "Inicio completado. Introduzca la siguiente configuración de PROXY en su navegador: localhost (o el ip del equipo) puerto 8118 (9151 para socks) y localhost (o el ip del equipo) puerto 9050 para las otras aplicaciones que usen socks."
 		fi
-	;;
+		;;
 
 	stop)
 	    	if [[ -f $lock ]]; then
@@ -162,11 +162,11 @@ case "$1" in
 		else
 			echo "Tor no se esta ejecutando."
 		fi
-	;;
+		;;
 
 	*)
-		echo "USO: $0 install start stop"
-	;;
+		echo "USO: $0 {install|start|stop}"
+		;;
 esac
 rm -f /run/tor-strong.pid
 trap - INT TERM EXIT
