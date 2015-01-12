@@ -16,10 +16,10 @@ case "$1" in
 		echo "deb-src http://deb.torproject.org/torproject.org/ sid main" >> /etc/apt/sources.list.d/tor.list
 		gpg --keyserver keys.gnupg.net --recv 886DDD89
 		gpg --export A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89 | apt-key add -
-		apt-get update
-		apt-get -y install deb.torproject.org-keyring
-		apt-get update
-		apt-get -y install polipo privoxy tor tor-arm dnsmasq
+		apt update
+		apt -y install deb.torproject.org-keyring
+		apt update
+		apt -y install polipo privoxy tor tor-arm dnsmasq
 		# torrc
 		echo "## SocksPort para trafico generico" > /etc/tor/torrc
 		echo "SocksPort 9050 IsolateDestAddr IsolateDestPort" >> /etc/tor/torrc
