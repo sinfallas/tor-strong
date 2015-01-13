@@ -1,4 +1,16 @@
-commit 4e268e5db9c18e3e7b6b6e02f4c60fea490e5c2b (HEAD, origin/master, origin/HEAD, master)
+commit 4d434c9daf76055a053d0e0f08c29734a60d83f6 (HEAD, origin/master, origin/HEAD, master)
+Author: Jose Perez <sinfallas@users.noreply.github.com>
+Date:   Mon Jan 12 15:45:23 2015 -0430
+
+    Update tor-strong.sh
+
+commit c29ebda01ce9f1bb2f09afce1b976702e31b88ef
+Author: sinfallas <sinfallas@gmail.com>
+Date:   Thu Jan 8 00:48:31 2015 -0430
+
+    * changelog
+
+commit 4e268e5db9c18e3e7b6b6e02f4c60fea490e5c2b
 Author: sinfallas <sinfallas@gmail.com>
 Date:   Thu Jan 8 00:47:33 2015 -0430
 
