@@ -132,7 +132,7 @@ case "$1" in
 
 	start)
 		if [[ -f $lock ]]; then
-			echo "Tor it's already running."
+			echo "Tor is already running."
 		else
 			touch $lock
 			mkdir /run/tor
