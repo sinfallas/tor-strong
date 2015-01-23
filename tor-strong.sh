@@ -30,7 +30,8 @@ case "$1" in
 		echo "CookieAuthentication 1" >> /etc/tor/torrc
 		echo "LearnCircuitBuildTimeout 1" >> /etc/tor/torrc
 		echo "EnforceDistinctSubnets 1" >> /etc/tor/torrc
-		echo "WarnUnsafeSocks 0" >> /etc/tor/torrc
+		echo "WarnUnsafeSocks 1" >> /etc/tor/torrc
+		echo "SafeSocks 1" >> /etc/tor/torrc
 		echo "DownloadExtraInfo 0" >> /etc/tor/torrc
 		echo "OptimisticData auto" >> /etc/tor/torrc
 		echo "UseMicrodescriptors auto" >> /etc/tor/torrc
