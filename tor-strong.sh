@@ -1,6 +1,6 @@
 #!/bin/bash
 if [ $USER != root ]; then
-echo "Error: debes ser root"
+echo "Error: you must be root"
 exit 1
 fi
 trap "rm -f /run/tor-strong.pid; exit" INT TERM EXIT
@@ -118,7 +118,7 @@ case "$1" in
 		echo "no-resolv" >> /etc/dnsmasq.conf
 		echo "server=127.0.0.1#9053" >> /etc/dnsmasq.conf
 		echo "server=208.67.222.222" >> /etc/dnsmasq.conf
-		# finalizando
+		# cleaning up
 		adduser --system --no-create-home debian-tor debian-tor
 		chown debian-tor:debian-tor /var/log/tor /var/lib/tor
 		chmod 600 /var/lib/tor /var/log/tor
@@ -127,12 +127,12 @@ case "$1" in
 		chmod g+rw /etc/tor/ /etc/tor/*
 		rm -f /usr/share/tor/tor-service-defaults-torrc
 		ln -s /etc/tor/torrc /usr/share/tor/tor-service-defaults-torrc
-		echo "Finalizado se recomienda reiniciar..."
+		echo "Finished, it's recommended to restart..."
 		;;
 
 	start)
 		if [[ -f $lock ]]; then
-			echo "Tor ya se esta ejecutando."
+			echo "Tor it's already running."
 		else
 			touch $lock
 			mkdir /run/tor
@@ -143,9 +143,9 @@ case "$1" in
 			service polipo start
 			service privoxy start
 			service dnsmasq restart
-			echo "Espere mientras se inicia TOR se le notificara al completarse la tarea."
+			echo "Wait while TOR starts will be notified upon completion of the task."
 			sleep 30
-			echo "Inicio completado. Introduzca la siguiente configuración de PROXY en su navegador: localhost (o el ip del equipo) puerto 8118 (9151 para socks) y localhost (o el ip del equipo) puerto 9050 para las otras aplicaciones que usen socks."
+			echo "Start completed. Enter the following PROXY settings in your browser: localhost port 8118 (9151 for socks) and localhost port 9050 to others apps that use socks."
 		fi
 		;;
 
@@ -159,14 +159,14 @@ case "$1" in
 			rm -f /run/polipo.pid
 			rm -f /run/privoxy.pid
 			rm -f $lock
-			echo "Servicio finalizado exitosamente."
+			echo "Finished."
 		else
-			echo "Tor no se esta ejecutando."
+			echo "Tor not's running."
 		fi
 		;;
 
 	*)
-		echo "USO: $0 {install|start|stop}"
+		echo "Usage: $0 {install|start|stop}"
 		;;
 esac
 rm -f /run/tor-strong.pid
