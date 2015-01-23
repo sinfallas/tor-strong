@@ -1,4 +1,16 @@
-commit 4d434c9daf76055a053d0e0f08c29734a60d83f6 (HEAD, origin/master, origin/HEAD, master)
+commit 44036a93fa59a72696c8b93c773ac4597e8e55b9 (HEAD, origin/master, origin/HEAD, master)
+Author: sinfallas <sinfallas@gmail.com>
+Date:   Thu Jan 22 21:09:18 2015 -0430
+
+    * se cambia la configuracion de tor para hacerlo mas seguro
+
+commit b7a639f3e501234a8ca6247c810a43527053df31
+Author: sinfallas <sinfallas@gmail.com>
+Date:   Tue Jan 13 19:19:54 2015 -0430
+
+    * changelog
+
+commit 4d434c9daf76055a053d0e0f08c29734a60d83f6
 Author: Jose Perez <sinfallas@users.noreply.github.com>
 Date:   Mon Jan 12 15:45:23 2015 -0430
 
