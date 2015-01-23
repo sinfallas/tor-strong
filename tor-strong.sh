@@ -125,8 +125,8 @@ case "$1" in
 		chmod u+x /var/lib/tor /var/log/tor
 		chgrp debian-tor /etc/tor/ /etc/tor/*
 		chmod g+rw /etc/tor/ /etc/tor/*
-		rm -f /usr/share/tor/tor-service-defaults-torrc
-		ln -s /etc/tor/torrc /usr/share/tor/tor-service-defaults-torrc
+		rm -fv /usr/share/tor/tor-service-defaults-torrc
+		ln -sv /etc/tor/torrc /usr/share/tor/tor-service-defaults-torrc
 		echo "Finished, it's recommended to restart..."
 		;;
 
