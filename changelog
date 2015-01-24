@@ -1,4 +1,28 @@
-commit 44036a93fa59a72696c8b93c773ac4597e8e55b9 (HEAD, origin/master, origin/HEAD, master)
+commit 82131d3ff9267c71dcccdf508e9b0906527e6957 (HEAD, origin/master, origin/HEAD, master)
+Author: Jose Perez <sinfallas@users.noreply.github.com>
+Date:   Fri Jan 23 08:43:59 2015 -0430
+
+    Update tor-strong.sh
+
+commit f6a4af929c32bd67e2b033d421efa88deec748b0
+Author: Jose Perez <sinfallas@users.noreply.github.com>
+Date:   Fri Jan 23 08:32:41 2015 -0430
+
+    Update tor-strong.sh
+
+commit 3001002c00476371aad519c7cec3a4f577e5256e
+Author: Jose Perez <sinfallas@users.noreply.github.com>
+Date:   Fri Jan 23 08:31:40 2015 -0430
+
+    se traducen los mensajes al ingles
+
+commit 8250a3d35420980d08182e9ad98c91194e24aff7
+Author: sinfallas <sinfallas@gmail.com>
+Date:   Thu Jan 22 21:09:39 2015 -0430
+
+    * changelog
+
+commit 44036a93fa59a72696c8b93c773ac4597e8e55b9
 Author: sinfallas <sinfallas@gmail.com>
 Date:   Thu Jan 22 21:09:18 2015 -0430
 
