@@ -115,6 +115,8 @@ case "$1" in
 		echo "bogus-priv" >> /etc/dnsmasq.conf
 		echo "user=dnsmasq" >> /etc/dnsmasq.conf
 		echo "group=dnsmasq" >> /etc/dnsmasq.conf
+		echo "cache-size=2048" >> /etc/dnsmasq.conf
+		echo "neg-ttl=3600" >> /etc/dnsmasq.conf
 		echo "no-resolv" >> /etc/dnsmasq.conf
 		echo "server=127.0.0.1#9053" >> /etc/dnsmasq.conf
 		echo "server=208.67.222.222" >> /etc/dnsmasq.conf
