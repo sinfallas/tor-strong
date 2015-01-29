@@ -1,4 +1,16 @@
-commit a7fcbe45e54f5d8cb36d54ae48d9752892301624 (HEAD, origin/master, origin/HEAD, master)
+commit ac5438537dfcf5142916951fe435b6ed64f8826a (HEAD, origin/master, origin/HEAD, master)
+Author: sinfallas <sinfallas@gmail.com>
+Date:   Thu Jan 29 14:42:29 2015 -0430
+
+    * se apaga el servidor ssh al iniciar tor
+
+commit 5e7d3aa46a981bd4e726b1de043e6306884f9609
+Author: sinfallas <sinfallas@gmail.com>
+Date:   Thu Jan 29 14:35:24 2015 -0430
+
+    * changelog
+
+commit a7fcbe45e54f5d8cb36d54ae48d9752892301624
 Author: sinfallas <sinfallas@gmail.com>
 Date:   Thu Jan 29 14:35:07 2015 -0430
 
