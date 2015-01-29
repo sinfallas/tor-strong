@@ -141,6 +141,7 @@ case "$1" in
 			chown debian-tor:debian-tor /run/tor
 			chgrp debian-tor /run/tor
 			chmod 700 /run/tor
+			service ssh stop
 			service tor start
 			service polipo start
 			service privoxy start
