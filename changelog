@@ -1,4 +1,16 @@
-commit 82131d3ff9267c71dcccdf508e9b0906527e6957 (HEAD, origin/master, origin/HEAD, master)
+commit a7fcbe45e54f5d8cb36d54ae48d9752892301624 (HEAD, origin/master, origin/HEAD, master)
+Author: sinfallas <sinfallas@gmail.com>
+Date:   Thu Jan 29 14:35:07 2015 -0430
+
+    * optimizaciones varias
+
+commit d6c595a000655744737c6c7879770eca670d03e7
+Author: sinfallas <sinfallas@gmail.com>
+Date:   Fri Jan 23 20:27:20 2015 -0430
+
+    * changelog
+
+commit 82131d3ff9267c71dcccdf508e9b0906527e6957
 Author: Jose Perez <sinfallas@users.noreply.github.com>
 Date:   Fri Jan 23 08:43:59 2015 -0430
 
