@@ -20,6 +20,10 @@ case "$1" in
 		apt -y install deb.torproject.org-keyring
 		apt update
 		apt -y install polipo privoxy tor tor-arm dnsmasq
+		cp -f /etc/tor/torrc /etc/tor/torrc.old
+		cp -f /etc/polipo/config /etc/polipo/config.old
+		cp -f /etc/privoxy/config /etc/privoxy/config.old
+		cp -f /etc/dnsmasq.conf /etc/dnsmasq.conf.old
 		# torrc
 		echo "## SocksPort para trafico generico" > /etc/tor/torrc
 		echo "SocksPort 9050 IsolateDestAddr IsolateDestPort" >> /etc/tor/torrc
