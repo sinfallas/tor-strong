@@ -166,7 +166,7 @@ case "$1" in
 			rm -f /run/polipo.pid
 			rm -f /run/privoxy.pid
 			rm -f $lock
-			echo "Finished."
+			echo -e "\e[00;1;92mFinished...\e[00m"
 		else
 			echo "Tor not's running."
 		fi
