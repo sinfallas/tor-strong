@@ -1,6 +1,6 @@
 #!/bin/bash
-if [ $USER != root ]; then
-echo "Error: you must be root"
+if [[ $USER != root ]]; then
+echo -e "\e[00;31mERROR: must be root\e[00m"
 exit 1
 fi
 trap "rm -f /run/tor-strong.pid; exit" INT TERM EXIT
