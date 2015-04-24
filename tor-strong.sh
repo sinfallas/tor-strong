@@ -32,17 +32,7 @@ case "$1" in
 		echo "RunAsDaemon 1" >> /etc/tor/torrc
 		echo "DataDirectory /var/lib/tor" >> /etc/tor/torrc
 		echo "CookieAuthentication 1" >> /etc/tor/torrc
-		echo "LearnCircuitBuildTimeout 1" >> /etc/tor/torrc
-		echo "EnforceDistinctSubnets 1" >> /etc/tor/torrc
-		echo "WarnUnsafeSocks 1" >> /etc/tor/torrc
 		echo "SafeSocks 1" >> /etc/tor/torrc
-		echo "DownloadExtraInfo 0" >> /etc/tor/torrc
-		echo "OptimisticData auto" >> /etc/tor/torrc
-		echo "UseMicrodescriptors auto" >> /etc/tor/torrc
-		echo "UseNTorHandshake auto" >> /etc/tor/torrc
-		echo "NumCPUs 0" >> /etc/tor/torrc
-		echo "ServerDNSDetectHijacking 1" >> /etc/tor/torrc
-		echo "ServerDNSRandomizeCase 1" >> /etc/tor/torrc
 		echo "PIDFile /run/tor/tor.pid" >> /etc/tor/torrc
 		echo "AvoidDiskWrites 1" >> /etc/tor/torrc
 		echo "VirtualAddrNetworkIPv4 10.192.0.0/10" >> /etc/tor/torrc
