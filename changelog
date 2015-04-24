@@ -1,4 +1,16 @@
-commit 036f09d6b11e479a91db90f27238509d2a819afe (HEAD, origin/master, origin/HEAD, master)
+commit 39ca6e8c666e314856a32543da0b5c64c43acdcb (HEAD, origin/master, origin/HEAD, master)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Thu Apr 23 21:39:00 2015 -0430
+
+    * actualizacion de parametros
+
+commit 08f783d5ef2cf9b7f8c36a082e9582b2c0e6c9a1 (tag: v1.3)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Fri Mar 6 17:02:49 2015 -0430
+
+    * changelog
+
+commit 036f09d6b11e479a91db90f27238509d2a819afe
 Author: jose perez <sinfallas@gmail.com>
 Date:   Fri Mar 6 17:02:27 2015 -0430
 
