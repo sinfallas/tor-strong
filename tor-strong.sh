@@ -14,7 +14,7 @@ case "$1" in
 		mkdir -p /var/log/tor
 		echo "deb http://deb.torproject.org/torproject.org/ sid main" > /etc/apt/sources.list.d/tor.list
 		echo "deb-src http://deb.torproject.org/torproject.org/ sid main" >> /etc/apt/sources.list.d/tor.list
-		gpg --keyserver keys.gnupg.net --recv 886DDD89
+		gpg --keyserver http-keys.gnupg.net --recv 886DDD89
 		gpg --export A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89 | apt-key add -
 		apt update
 		apt -y install deb.torproject.org-keyring
