@@ -11,8 +11,8 @@ Script to install tor + polipo + privoxy + dnsmasq
 ## How to use
 
 ```bash
-$ curl -O https://raw.githubusercontent.com/sinfallas/tor-strong/master/tor-strong.sh
-$ chmod +x tor-strong.sh
+$ curl -O https://raw.githubusercontent.com/sinfallas/tor-strong/master/tor-strong
+$ chmod +x tor-strong
 ```
 copy to /usr/bin/ and then execute as root or sudo:
 
