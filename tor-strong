@@ -1,12 +1,13 @@
 #!/bin/bash
 # Made by Sinfallas <sinfallas@yahoo.com>
 # Licence: GPL-2
+LC_ALL=C
 if [[ $USER != root ]]; then
 	echo -e "\e[00;31mERROR: DEBES SER ROOT\e[00m"
 	exit 1
 fi
 trap "rm -f /run/tor-strong.pid; exit" INT TERM EXIT
-echo $BASHPID > /run/tor-strong.pid
+echo "$BASHPID" > /run/tor-strong.pid
 lock="/run/tor.lock"
 case "$1" in
 	install)
@@ -129,10 +130,10 @@ case "$1" in
 		;;
 
 	start)
-		if [[ -f $lock ]]; then
+		if [[ -f "$lock" ]]; then
 			echo "Tor is already running."
 		else
-			touch $lock
+			touch "$lock"
 			mkdir /run/tor
 			chown debian-tor:debian-tor /run/tor
 			chgrp debian-tor /run/tor
@@ -149,7 +150,7 @@ case "$1" in
 		;;
 
 	stop)
-	    	if [[ -f $lock ]]; then
+	    	if [[ -f "$lock" ]]; then
 			service privoxy stop
 			service polipo stop
 			service tor stop
