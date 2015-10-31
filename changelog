@@ -1,4 +1,22 @@
-commit 0ee73e8dbc5932cc804479829353b42540e65f44 (HEAD, origin/master, origin/HEAD, master)
+commit 7888b67d7a47aa319412c403a7d81827bf1da2ad (HEAD, origin/master, origin/HEAD, master)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sat Oct 31 18:37:05 2015 -0430
+
+    * se agrega el archivo todo
+
+commit 50022b8be39ce5b1d2f2fcfb0249eacb988d276d
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sun Oct 18 23:56:52 2015 -0430
+
+    optimizaciones
+
+commit f709d7b3a14786a7e63aaaa6a3726dc04c7c72c8
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sat Oct 17 20:53:54 2015 -0430
+
+    * changelog
+
+commit 0ee73e8dbc5932cc804479829353b42540e65f44
 Author: jose perez <sinfallas@gmail.com>
 Date:   Sat Oct 17 20:53:27 2015 -0430
 
