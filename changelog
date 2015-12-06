@@ -1,4 +1,16 @@
-commit 7888b67d7a47aa319412c403a7d81827bf1da2ad (HEAD, origin/master, origin/HEAD, master)
+commit 61b2e40a06a588eec19ab31c03c482305d34a895 (HEAD, origin/master, origin/HEAD, master)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sun Dec 6 18:02:04 2015 -0430
+
+    boinc-preinstaller
+
+commit 77c3560b318842c48593923954826e910f38a507
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sat Oct 31 18:37:20 2015 -0430
+
+    * changelog
+
+commit 7888b67d7a47aa319412c403a7d81827bf1da2ad
 Author: jose perez <sinfallas@gmail.com>
 Date:   Sat Oct 31 18:37:05 2015 -0430
 
