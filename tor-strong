@@ -6,8 +6,8 @@ if [[ $USER != root ]]; then
 	echo -e "\e[00;31mERROR: DEBES SER ROOT\e[00m"
 	exit 1
 fi
-trap "rm -f /run/tor-strong.pid; exit" INT TERM EXIT
-echo "$BASHPID" > /run/tor-strong.pid
+trap "rm -f /run/$(basename $0).pid; exit" INT TERM EXIT
+echo "$BASHPID" > /run/$(basename $0).pid
 lock="/run/tor.lock"
 case "$1" in
 	install)
@@ -166,9 +166,9 @@ case "$1" in
 		;;
 
 	*)
-		echo "Usage: $0 {install|start|stop}"
+		echo "Usage: $(basename $0) {install|start|stop}"
 		;;
 esac
-rm -f /run/tor-strong.pid
+rm -f /run/$(basename $0).pid
 trap - INT TERM EXIT
 exit 0
