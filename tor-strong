@@ -2,7 +2,6 @@
 # Made by Sinfallas <sinfallas@yahoo.com>
 # Licence: GPL-2
 set -eu
-set -o pipefail
 LC_ALL=C
 if [[ "$EUID" != "0" ]]; then
 	echo -e "\e[00;31mERROR: DEBES SER ROOT\e[00m"
