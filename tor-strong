@@ -10,6 +10,9 @@ fi
 trap "rm -f /run/$(basename $0).pid; exit" INT TERM EXIT
 echo "$BASHPID" > /run/$(basename $0).pid
 lock="/run/tor.lock"
+torpath="/etc/tor/torrc"
+polipopath=""
+privpath=""
 case "$1" in
 	install)
 		mkdir -p /var/cache/polipo
@@ -29,28 +32,28 @@ case "$1" in
 		cp -f /etc/privoxy/config /etc/privoxy/config.old
 		cp -f /etc/dnsmasq.conf /etc/dnsmasq.conf.old
 		# torrc
-		echo "## SocksPort para trafico generico" > /etc/tor/torrc
-		echo "SocksPort 9050 IsolateDestAddr IsolateDestPort" >> /etc/tor/torrc
-		echo "## SocksPort para el navegador" >> /etc/tor/torrc
-		echo "SocksPort 9151" >> /etc/tor/torrc
-		echo "RunAsDaemon 1" >> /etc/tor/torrc
-		echo "DataDirectory /var/lib/tor" >> /etc/tor/torrc
-		echo "CookieAuthentication 1" >> /etc/tor/torrc
-		echo "SafeSocks 1" >> /etc/tor/torrc
-		echo "PIDFile /run/tor/tor.pid" >> /etc/tor/torrc
-		echo "AvoidDiskWrites 1" >> /etc/tor/torrc
-		echo "VirtualAddrNetworkIPv4 10.192.0.0/10" >> /etc/tor/torrc
-		echo "DNSPort 9053" >> /etc/tor/torrc
-		echo "AutomapHostsOnResolve 1" >> /etc/tor/torrc
-		echo "AutomapHostsSuffixes .exit,.onion" >> /etc/tor/torrc
-		echo "TransPort 9040" >> /etc/tor/torrc
-		echo "User debian-tor" >> /etc/tor/torrc
-		echo "DisableDebuggerAttachment 0" >> /etc/tor/torrc
-		echo "ControlSocket /run/tor/control" >> /etc/tor/torrc
-		echo "ControlSocketsGroupWritable 1" >> /etc/tor/torrc
-		echo "CookieAuthFileGroupReadable 1" >> /etc/tor/torrc
-		echo "CookieAuthFile /run/tor/control.authcookie" >> /etc/tor/torrc
-		echo "Log notice file /var/log/tor/log" >> /etc/tor/torrc
+		echo "## SocksPort para trafico generico" > $torpath
+		echo "SocksPort 9050 IsolateDestAddr IsolateDestPort" >> $torpath
+		echo "## SocksPort para el navegador" >> $torpath
+		echo "SocksPort 9151" >> $torpath
+		echo "RunAsDaemon 1" >> $torpath
+		echo "DataDirectory /var/lib/tor" >> $torpath
+		echo "CookieAuthentication 1" >> $torpath
+		echo "SafeSocks 1" >> $torpath
+		echo "PIDFile /run/tor/tor.pid" >> $torpath
+		echo "AvoidDiskWrites 1" >> $torpath
+		echo "VirtualAddrNetworkIPv4 10.192.0.0/10" >> $torpath
+		echo "DNSPort 9053" >> $torpath
+		echo "AutomapHostsOnResolve 1" >> $torpath
+		echo "AutomapHostsSuffixes .exit,.onion" >> $torpath
+		echo "TransPort 9040" >> $torpath
+		echo "User debian-tor" >> $torpath
+		echo "DisableDebuggerAttachment 0" >> $torpath
+		echo "ControlSocket /run/tor/control" >> $torpath
+		echo "ControlSocketsGroupWritable 1" >> $torpath
+		echo "CookieAuthFileGroupReadable 1" >> $torpath
+		echo "CookieAuthFile /run/tor/control.authcookie" >> $torpath
+		echo "Log notice file /var/log/tor/log" >> $torpath
 		# polipo
 		echo "logSyslog = true" > /etc/polipo/config
 		echo "logFile = /var/log/polipo/polipo.log" >> /etc/polipo/config
