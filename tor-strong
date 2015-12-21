@@ -21,16 +21,6 @@ case "$1" in
 		mkdir -p /var/log/tor
 		mkdir -p /run/tor
 		mkdir -p /var/log/tor
-		chown debian-tor:debian-tor /var/log/tor
-		chown debian-tor:debian-tor /run/tor
-		chown debian-tor:debian-tor /var/lib/tor
-		chmod 0765 /var/log/tor
-		chmod 0700 /run/tor
-		chmod 0600 /var/lib/tor
-		chmod u+x /var/lib/tor
-		chgrp debian-tor /etc/tor/ /etc/tor/*
-		chmod g+rw /etc/tor/ /etc/tor/*
-		ln -sf /etc/tor/torrc /usr/share/tor/tor-service-defaults-torrc
 		echo "deb http://deb.torproject.org/torproject.org/ sid main" > /etc/apt/sources.list.d/tor.list
 		echo "deb-src http://deb.torproject.org/torproject.org/ sid main" >> /etc/apt/sources.list.d/tor.list
 		gpg --keyserver http-keys.gnupg.net --recv 886DDD89
@@ -136,10 +126,12 @@ case "$1" in
 		# cleaning up
 		adduser --system --no-create-home debian-tor debian-tor
 		chown debian-tor:debian-tor /var/log/tor /var/lib/tor
+		chown debian-tor:debian-tor /run/tor
 		chmod 600 /var/lib/tor /var/log/tor
 		chmod u+x /var/lib/tor /var/log/tor
-		chgrp debian-tor /etc/tor/ /etc/tor/*
 		chmod g+rw /etc/tor/ /etc/tor/*
+		chmod 0700 /run/tor
+		chgrp debian-tor /etc/tor/ /etc/tor/*
 		rm -fv /usr/share/tor/tor-service-defaults-torrc
 		ln -sv /etc/tor/torrc /usr/share/tor/tor-service-defaults-torrc
 		echo "Finished, it's recommended to restart..."
