@@ -14,6 +14,7 @@ torpath="/etc/tor/torrc"
 polipopath="/etc/polipo/config"
 privpath="/etc/privoxy/config"
 dnspath="/etc/dnsmasq.conf"
+proxypath="/etc/proxychains.conf"
 case "$1" in
 	install)
 		mkdir -p /var/cache/polipo
@@ -29,7 +30,7 @@ case "$1" in
 		apt update
 		apt -y install deb.torproject.org-keyring
 		apt update
-		apt -y install polipo privoxy tor tor-arm dnsmasq proxychains
+		apt -y install polipo privoxy tor tor-arm dnsmasq proxychains tsocks
 		cp -f /etc/tor/torrc /etc/tor/torrc.old
 		cp -f /etc/polipo/config /etc/polipo/config.old
 		cp -f /etc/privoxy/config /etc/privoxy/config.old
@@ -124,6 +125,16 @@ case "$1" in
 		echo "no-resolv" >> $dnspath
 		echo "server=127.0.0.1#9053" >> $dnspath
 		echo "server=208.67.222.222" >> $dnspath
+		# proxychains
+		echo "dynamic_chain" > $proxypath
+		echo "quiet_mode" >> $proxypath
+		echo "proxy_dns" >> $proxypath
+		echo "tcp_read_time_out 15000" >> $proxypath
+		echo "tcp_connect_time_out 8000" >> $proxypath
+		echo "[ProxyList]" >> $proxypath
+		echo "http  127.0.0.1 8118" >> $proxypath
+		echo "socks5  127.0.0.1 8123" >> $proxypath
+		echo "socks5 	127.0.0.1 9050" >> $proxypath
 		# cleaning up
 		adduser --system --no-create-home debian-tor debian-tor
 		chown debian-tor:debian-tor /var/log/tor /var/lib/tor
@@ -147,11 +158,18 @@ case "$1" in
 			chown debian-tor:debian-tor /run/tor
 			chgrp debian-tor /run/tor
 			chmod 700 /run/tor
+			iptables -A INPUT -p udp --sport 53 -j ACCEPT
+			iptables -A INPUT -p udp --dport 53 -j ACCEPT
+			iptables -A OUTPUT -p udp --sport 53 -j ACCEPT
+			iptables -A OUTPUT -p udp --dport 53 -j ACCEPT
+			iptables -A INPUT -p udp -j DROP
+			iptables -A OUTPUT -p udp -j DROP
 			service ssh stop
 			service tor start
 			service polipo start
 			service privoxy start
 			service dnsmasq restart
+			tsocks -on
 			echo "Wait while TOR starts will be notified upon completion of the task."
 			sleep 30
 			echo "Start completed. Enter the following PROXY settings in your browser: localhost port 8118 (9151 for socks) and localhost port 9050 to others apps that use socks."
@@ -164,6 +182,7 @@ case "$1" in
 			service polipo stop
 			service tor stop
 			service dnsmasq restart
+			tsocks -off
 			rm -f /run/tor/tor.pid
 			rm -f /run/polipo.pid
 			rm -f /run/privoxy.pid
