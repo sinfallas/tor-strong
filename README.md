@@ -5,7 +5,7 @@
 
 ![Status](https://api.travis-ci.org/sinfallas/tor-strong.svg) 
 
-Script to install tor + polipo + privoxy + dnsmasq
+Script to install tor + polipo + privoxy + dnsmasq + proxychains + tsocks
 
 ## How to use
 
