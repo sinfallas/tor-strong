@@ -11,8 +11,8 @@ trap "rm -f /run/$(basename $0).pid; exit" INT TERM EXIT
 echo "$BASHPID" > /run/$(basename $0).pid
 lock="/run/tor.lock"
 torpath="/etc/tor/torrc"
-polipopath=""
-privpath=""
+polipopath="/etc/polipo/config"
+privpath="/etc/privoxy/config"
 case "$1" in
 	install)
 		mkdir -p /var/cache/polipo
@@ -55,31 +55,31 @@ case "$1" in
 		echo "CookieAuthFile /run/tor/control.authcookie" >> $torpath
 		echo "Log notice file /var/log/tor/log" >> $torpath
 		# polipo
-		echo "logSyslog = true" > /etc/polipo/config
-		echo "logFile = /var/log/polipo/polipo.log" >> /etc/polipo/config
-		echo "socksParentProxy = localhost:9151" >> /etc/polipo/config
-		echo "socksProxyType = socks5" >> /etc/polipo/config
-		echo 'proxyAddress = "127.0.0.1"' >> /etc/polipo/config
-		echo "proxyPort = 8123" >> /etc/polipo/config
-		echo "allowedClients = 127.0.0.1" >> /etc/polipo/config
-		echo "allowedPorts = 1-65535" >> /etc/polipo/config
-		echo 'diskCacheRoot = "/var/cache/polipo/"' >> /etc/polipo/config
-		echo "cacheIsShared = false" >> /etc/polipo/config
-		echo 'localDocumentRoot = ""' >> /etc/polipo/config
-		echo 'proxyName = "localhost"' >> /etc/polipo/config
-		echo "disableLocalInterface = true" >> /etc/polipo/config
-		echo "disableConfiguration = true" >> /etc/polipo/config
-		echo "dnsUseGethostbyname = yes" >> /etc/polipo/config
-		echo "dnsQueryIPv6 = no" >> /etc/polipo/config
-		echo "disableVia = true" >> /etc/polipo/config
-		echo "#censoredHeaders = from,accept-language,x-pad,link" >> /etc/polipo/config
-		echo "#censorReferer = maybe" >> /etc/polipo/config
-		echo "maxConnectionAge = 5m" >> /etc/polipo/config
-		echo "maxConnectionRequests = 120" >> /etc/polipo/config
-		echo "serverMaxSlots = 8" >> /etc/polipo/config
-		echo "serverSlots = 2" >> /etc/polipo/config
-		echo "tunnelAllowedPorts = 1-65535" >> /etc/polipo/config
-		echo "pidFile = /run/polipo.pid" >> /etc/polipo/config
+		echo "logSyslog = true" > $polipopath
+		echo "logFile = /var/log/polipo/polipo.log" >> $polipopath
+		echo "socksParentProxy = localhost:9151" >> $polipopath
+		echo "socksProxyType = socks5" >> $polipopath
+		echo 'proxyAddress = "127.0.0.1"' >> $polipopath
+		echo "proxyPort = 8123" >> $polipopath
+		echo "allowedClients = 127.0.0.1" >> $polipopath
+		echo "allowedPorts = 1-65535" >> $polipopath
+		echo 'diskCacheRoot = "/var/cache/polipo/"' >> $polipopath
+		echo "cacheIsShared = false" >> $polipopath
+		echo 'localDocumentRoot = ""' >> $polipopath
+		echo 'proxyName = "localhost"' >> $polipopath
+		echo "disableLocalInterface = true" >> $polipopath
+		echo "disableConfiguration = true" >> $polipopath
+		echo "dnsUseGethostbyname = yes" >> $polipopath
+		echo "dnsQueryIPv6 = no" >> $polipopath
+		echo "disableVia = true" >> $polipopath
+		echo "#censoredHeaders = from,accept-language,x-pad,link" >> $polipopath
+		echo "#censorReferer = maybe" >> $polipopath
+		echo "maxConnectionAge = 5m" >> $polipopath
+		echo "maxConnectionRequests = 120" >> $polipopath
+		echo "serverMaxSlots = 8" >> $polipopath
+		echo "serverSlots = 2" >> $polipopath
+		echo "tunnelAllowedPorts = 1-65535" >> $polipopath
+		echo "pidFile = /run/polipo.pid" >> $polipopath
 		# privoxy
 		echo "user-manual /usr/share/doc/privoxy/user-manual" > /etc/privoxy/config
 		echo "confdir /etc/privoxy" >> /etc/privoxy/config
