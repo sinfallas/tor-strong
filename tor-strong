@@ -81,35 +81,35 @@ case "$1" in
 		echo "tunnelAllowedPorts = 1-65535" >> $polipopath
 		echo "pidFile = /run/polipo.pid" >> $polipopath
 		# privoxy
-		echo "user-manual /usr/share/doc/privoxy/user-manual" > /etc/privoxy/config
-		echo "confdir /etc/privoxy" >> /etc/privoxy/config
-		echo "logdir /var/log/privoxy" >> /etc/privoxy/config
-		echo "actionsfile match-all.action" >> /etc/privoxy/config
-		echo "actionsfile default.action" >> /etc/privoxy/config
-		echo "actionsfile user.action" >> /etc/privoxy/config
-		echo "filterfile default.filter" >> /etc/privoxy/config
-		echo "filterfile user.filter" >> /etc/privoxy/config
-		echo "logfile logfile" >> /etc/privoxy/config
-		echo "hostname privoxy" >> /etc/privoxy/config
-		echo "listen-address  :8118" >> /etc/privoxy/config
-		echo "toggle  1" >> /etc/privoxy/config
-		echo "enable-remote-toggle  0" >> /etc/privoxy/config
-		echo "enable-remote-http-toggle  0" >> /etc/privoxy/config
-		echo "enable-edit-actions 0" >> /etc/privoxy/config
-		echo "enforce-blocks 0" >> /etc/privoxy/config
-		echo "buffer-limit 4096" >> /etc/privoxy/config
-		echo "enable-proxy-authentication-forwarding 0" >> /etc/privoxy/config
-		echo "forward   /               127.0.0.1:8123" >> /etc/privoxy/config
-		echo "forward         192.168.*.*/     ." >> /etc/privoxy/config
-		echo "forward            10.*.*.*/     ." >> /etc/privoxy/config
-		echo "forward           127.*.*.*/     ." >> /etc/privoxy/config
-		echo "forwarded-connect-retries  0" >> /etc/privoxy/config
-		echo "accept-intercepted-requests 0" >> /etc/privoxy/config
-		echo "allow-cgi-request-crunching 0" >> /etc/privoxy/config
-		echo "split-large-forms 0" >> /etc/privoxy/config
-		echo "keep-alive-timeout 5" >> /etc/privoxy/config
-		echo "tolerate-pipelining 1" >> /etc/privoxy/config
-		echo "socket-timeout 300" >> /etc/privoxy/config
+		echo "user-manual /usr/share/doc/privoxy/user-manual" > $privpath
+		echo "confdir /etc/privoxy" >> $privpath
+		echo "logdir /var/log/privoxy" >> $privpath
+		echo "actionsfile match-all.action" >> $privpath
+		echo "actionsfile default.action" >> $privpath
+		echo "actionsfile user.action" >> $privpath
+		echo "filterfile default.filter" >> $privpath
+		echo "filterfile user.filter" >> $privpath
+		echo "logfile logfile" >> $privpath
+		echo "hostname privoxy" >> $privpath
+		echo "listen-address  :8118" >> $privpath
+		echo "toggle  1" >> $privpath
+		echo "enable-remote-toggle  0" >> $privpath
+		echo "enable-remote-http-toggle  0" >> $privpath
+		echo "enable-edit-actions 0" >> $privpath
+		echo "enforce-blocks 0" >> $privpath
+		echo "buffer-limit 4096" >> $privpath
+		echo "enable-proxy-authentication-forwarding 0" >> $privpath
+		echo "forward   /               127.0.0.1:8123" >> $privpath
+		echo "forward         192.168.*.*/     ." >> $privpath
+		echo "forward            10.*.*.*/     ." >> $privpath
+		echo "forward           127.*.*.*/     ." >> $privpath
+		echo "forwarded-connect-retries  0" >> $privpath
+		echo "accept-intercepted-requests 0" >> $privpath
+		echo "allow-cgi-request-crunching 0" >> $privpath
+		echo "split-large-forms 0" >> $privpath
+		echo "keep-alive-timeout 5" >> $privpath
+		echo "tolerate-pipelining 1" >> $privpath
+		echo "socket-timeout 300" >> $privpath
 		# dnsmasq
 		echo "port=53" > /etc/dnsmasq.conf
 		echo "domain-needed" >> /etc/dnsmasq.conf
