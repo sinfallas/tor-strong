@@ -15,6 +15,20 @@ polipopath="/etc/polipo/config"
 privpath="/etc/privoxy/config"
 dnspath="/etc/dnsmasq.conf"
 proxypath="/etc/proxychains.conf"
+
+function iptables_clean () {
+	iptables -F
+	iptables -X
+	iptables -Z
+	iptables -t nat -F
+	iptables -t nat -X
+	iptables -t mangle -F
+	iptables -t mangle -X
+	iptables -P INPUT ACCEPT
+	iptables -P FORWARD ACCEPT
+	iptables -P OUTPUT ACCEPT
+}
+
 case "$1" in
 	install)
 		mkdir -p /var/cache/polipo
@@ -158,6 +172,7 @@ case "$1" in
 			chown debian-tor:debian-tor /run/tor
 			chgrp debian-tor /run/tor
 			chmod 700 /run/tor
+			iptables_clean
 			iptables -A INPUT -p udp --sport 53 -j ACCEPT
 			iptables -A INPUT -p udp --dport 53 -j ACCEPT
 			iptables -A OUTPUT -p udp --sport 53 -j ACCEPT
@@ -183,6 +198,7 @@ case "$1" in
 			service tor stop
 			service dnsmasq restart
 			tsocks -off
+			iptables_clean
 			rm -f /run/tor/tor.pid
 			rm -f /run/polipo.pid
 			rm -f /run/privoxy.pid
