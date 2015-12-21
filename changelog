@@ -1,4 +1,64 @@
-commit 003bb51ab3f43c9f36a4400e83c5cef4d58a685e (HEAD, origin/master, origin/HEAD, master)
+commit 24def5eb08889880df0cc53aaafc0d278d8432ad (HEAD, origin/master, origin/HEAD, master)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sun Dec 20 22:49:33 2015 -0430
+
+    * se agrega funcion para limpiar iptables
+
+commit c1662f7bbda5957d6b89fdaeec3cb003a9f2790b
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sun Dec 20 22:47:31 2015 -0430
+
+    * se agrega toscks
+
+commit ca4e742be5198811faea4c0b41cc44bfd8e1742a
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sun Dec 20 22:37:53 2015 -0430
+
+    * se corrige la implementacion de trap
+
+commit cfc5619a73117da0fd8788b2916317bde23bb57b
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sun Dec 20 22:36:44 2015 -0430
+
+    * se sustityen las rutas de dnsmasq por variables
+
+commit 3d4994f1013e916b2d96a8fbdda3287603b5b2e3
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sun Dec 20 22:34:27 2015 -0430
+
+    * bugfix
+
+commit 1fd83fc01413bb09acf5832aea344a802bc09ade
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sun Dec 20 22:31:00 2015 -0430
+
+    * se modifican los permisos de las carpetas
+
+commit 0e4d2750bf1bc31570897bac1c382f90c377811d
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sun Dec 20 22:23:30 2015 -0430
+
+    * se sustityen las rutas de privoxy por variables
+
+commit f6d88c3021940806410f020d67b1cb7546da61ea
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sun Dec 20 22:18:27 2015 -0430
+
+    * se sustituyen las rutas de polipo por variables
+
+commit b32e02bd33e38d633efd590e57c570ff841a1996
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sun Dec 20 22:16:07 2015 -0430
+
+    * se sustituyen las rutas de tor por variables
+
+commit 0faf2270f5e136753b0c89999b797dcbf5757340
+Author: jose perez <sinfallas@gmail.com>
+Date:   Thu Dec 17 20:29:04 2015 -0430
+
+    * changelog
+
+commit 003bb51ab3f43c9f36a4400e83c5cef4d58a685e
 Author: jose perez <sinfallas@gmail.com>
 Date:   Sat Dec 12 00:16:40 2015 -0430
 
