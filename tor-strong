@@ -13,6 +13,7 @@ lock="/run/tor.lock"
 torpath="/etc/tor/torrc"
 polipopath="/etc/polipo/config"
 privpath="/etc/privoxy/config"
+dnspath="/etc/dnsmasq.conf"
 case "$1" in
 	install)
 		mkdir -p /var/cache/polipo
@@ -113,16 +114,16 @@ case "$1" in
 		echo "tolerate-pipelining 1" >> $privpath
 		echo "socket-timeout 300" >> $privpath
 		# dnsmasq
-		echo "port=53" > /etc/dnsmasq.conf
-		echo "domain-needed" >> /etc/dnsmasq.conf
-		echo "bogus-priv" >> /etc/dnsmasq.conf
-		echo "user=dnsmasq" >> /etc/dnsmasq.conf
-		echo "group=dnsmasq" >> /etc/dnsmasq.conf
-		echo "cache-size=2048" >> /etc/dnsmasq.conf
-		echo "neg-ttl=3600" >> /etc/dnsmasq.conf
-		echo "no-resolv" >> /etc/dnsmasq.conf
-		echo "server=127.0.0.1#9053" >> /etc/dnsmasq.conf
-		echo "server=208.67.222.222" >> /etc/dnsmasq.conf
+		echo "port=53" > $dnspath
+		echo "domain-needed" >> $dnspath
+		echo "bogus-priv" >> $dnspath
+		echo "user=dnsmasq" >> $dnspath
+		echo "group=dnsmasq" >> $dnspath
+		echo "cache-size=2048" >> $dnspath
+		echo "neg-ttl=3600" >> $dnspath
+		echo "no-resolv" >> $dnspath
+		echo "server=127.0.0.1#9053" >> $dnspath
+		echo "server=208.67.222.222" >> $dnspath
 		# cleaning up
 		adduser --system --no-create-home debian-tor debian-tor
 		chown debian-tor:debian-tor /var/log/tor /var/lib/tor
