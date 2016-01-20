@@ -1,10 +1,22 @@
-commit ebdafd6b7788067196aea2ba2772938491c9beae (HEAD, origin/master, origin/HEAD, master)
+commit 4a071e02bd6ee14193a0d1080f86b5e1d304b28c (HEAD, origin/master, origin/HEAD, master)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Wed Jan 20 19:23:06 2016 -0430
+
+    * bugfix
+
+commit 1e0bc13d020fb86de26a62092fe2533f4b8a89ad
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sun Dec 20 22:53:21 2015 -0430
+
+    * changelog
+
+commit ebdafd6b7788067196aea2ba2772938491c9beae
 Author: jose perez <sinfallas@gmail.com>
 Date:   Sun Dec 20 22:53:07 2015 -0430
 
     * se actualiza el readme.md
 
-commit a19aa502fdf69989c9c68f0b4091c9f435f75407
+commit a19aa502fdf69989c9c68f0b4091c9f435f75407 (tag: v1.5)
 Author: jose perez <sinfallas@gmail.com>
 Date:   Sun Dec 20 22:50:04 2015 -0430
 
