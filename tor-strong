@@ -163,6 +163,11 @@ case "$1" in
 		;;
 
 	start)
+		if ! [[ -f /usr/bin/tor ]] || [[ $(dpkg --get-selections | grep -w "tor" | awk '{print $1}' | head -1) != tor ]]; then
+			echo "Tor is not installed..."
+			exit 1
+		fi
+
 		if [[ -f "$lock" ]]; then
 			echo "Tor is already running."
 		else
