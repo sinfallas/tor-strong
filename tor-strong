@@ -6,7 +6,7 @@ if [[ "$EUID" != "0" ]]; then
 	echo -e "\e[00;31mERROR: DEBES SER ROOT\e[00m"
 	exit 1
 fi
-trap "rm -f /run/$(basename $0).pid; exit" 0 1 2 3 15
+trap "rm -f /run/$(basename $0).pid; exit" 0 1 2 3 9 15
 echo "$BASHPID" > /run/$(basename $0).pid
 lock="/run/tor.lock"
 torpath="/etc/tor/torrc"
